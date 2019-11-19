@@ -14,15 +14,15 @@ try:
     arcpy.CheckOutExtension("Network")
 
     #Set environment settings
-    env.workspace = "E:/Teaching/GEOG_3540/GEOG_3540_S20/Assignments/Assignment3/data"
+    env.workspace = "E:/GitHub/networkServiceArea"
     env.overwriteOutput = True
 
     #Set local variables
-    inNetworkDataset = "E:/Teaching/GEOG_3540/GEOG_3540_S20/Assignments/Assignment3/data/network_data/roads_ND.nd"
+    inNetworkDataset = "E:/GitHub/networkServiceArea/network_data/roads_ND.nd"
     outNALayerName = "SchoolAccessibility"
     impedanceAttribute = "length"
-    inFacilities = "E:/Teaching/GEOG_3540/GEOG_3540_S20/Assignments/Assignment3/data/schools.shp"
-    outLayerFile = "E:/Teaching/GEOG_3540/GEOG_3540_S20/Assignments/Assignment3/data/" + "/" + outNALayerName + ".lyr"
+    inFacilities = "E:/GitHub/networkServiceArea/schools.shp"
+    outLayerFile = "E:/GitHub/networkServiceArea/" + "/" + outNALayerName + ".lyr"
 
     #Create a new service area layer. We wish to generate the service area
     #polygons as rings, so that we can easily visualize the coverage for any
@@ -56,7 +56,7 @@ try:
     arcpy.management.SaveToLayerFile(outNALayer,outLayerFile,"RELATIVE")
 
 
-    outShapeFile = "E:/Teaching/GEOG_3540/GEOG_3540_S20/Assignments/Assignment3/data/" + "/" + outNALayerName + ".shp"
+    outShapeFile = "E:/GitHub/networkServiceArea/" + "/" + outNALayerName + ".shp"
     arcpy.CopyFeatures_management(outShapeFile, outNALayer)
 
     print "Script completed successfully"
