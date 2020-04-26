@@ -1,8 +1,8 @@
 # Name: MakeServiceAreaLayer_Workflow.py
-# Description: Generate 1-,2-,3- minute service area around fire stations and
+# Description: Generate 1-,2-,3- minute service area around schools and
 #              save the results to a layer file on disk. The service area
 #              polygons can be used to visualize the areas that do not have
-#              adequate coverage from the fire stations
+#              adequate coverage from the schools
 # Requirements: Network Analyst Extension
 
 #Import system modules
